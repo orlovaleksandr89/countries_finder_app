@@ -1,0 +1,30 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-right: 40px;
+}
+li {
+  cursor: pointer;
+}
+
+li:hover {
+  font-weight: bold;
+}
+
+.selected {
+  text-decoration: underline;
+  font-weight: bold;
+}
+.container {
+  display: flex;
+  padding: 0 25px 25px 25px;
+  margin: 0 25px 25px 25px;
+  text-align: left;
+  flex-direction: column;
+  width: 30vw;
+  height: 50vh;
+  overflow-y: scroll;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}

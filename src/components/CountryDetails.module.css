@@ -1,0 +1,26 @@
+.details {
+  padding: 0 20px;
+  width: 100%;
+}
+
+.details h1 {
+  margin: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-weight: normal;
+  font-size: medium;
+}
+p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+img {
+  padding: 0;
+  width: 200px;
+  margin-top: 10px;
+  border: 1px solid grey;
+}
