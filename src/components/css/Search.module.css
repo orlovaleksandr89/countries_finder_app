@@ -22,6 +22,7 @@
   border-radius: 50%;
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 .close::before {
   margin: 0;
@@ -55,58 +56,6 @@ span {
   margin: 0 5px;
 }
 
-/* .tablet {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  margin: 15px;
-  width: 100%;
-}
-
-.tablet input {
-  margin: 0 15px;
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  height: 25px;
-}
-.tablet span {
-  font-size: 1.5rem;
-  margin: 0 15px;
-}
-
-.tablet .close::before {
-  margin: 0;
-  padding: 0;
-  content: '';
-  position: absolute;
-  top: 8px;
-  left: 7px;
-  width: 1px;
-  height: 15px;
-  background-color: black;
-  border-width: 0 0.3em 0.25em 0;
-  transform: rotate(45deg);
-}
-.tablet .close::after {
-  margin: 0;
-  padding: 0;
-  content: '';
-  position: absolute;
-  top: 8px;
-  left: 7px;
-  width: 1px;
-  height: 15px;
-  background-color: black;
-  border-width: 0 0.3em 0.25em 0;
-  transform: rotate(315deg);
-} */
 @media only screen and (min-width: 425px) {
   .search {
     flex-direction: row;
