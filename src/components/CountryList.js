@@ -1,4 +1,4 @@
-import classes from './CountryList.module.css'
+import classes from './css/CountryList.module.css'
 import { useState, useEffect } from 'react'
 
 const CountryList = (props) => {

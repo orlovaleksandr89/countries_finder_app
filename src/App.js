@@ -53,7 +53,7 @@ function App() {
           }}
         />
       </header>
-      <main style={{ display: 'flex', width: '100vw' }}>
+      <main>
         <CountryList
           countries={loadedCountries}
           onLoad={isLoading}

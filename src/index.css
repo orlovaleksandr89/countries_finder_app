@@ -4,3 +4,20 @@ body {
   box-sizing: border-box;
   background-color: aliceblue;
 }
+header {
+  display: flex;
+  justify-content: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+}

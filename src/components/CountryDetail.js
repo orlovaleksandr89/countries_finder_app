@@ -1,18 +1,13 @@
-import classes from './CountryDetails.module.css'
-import Card from './Card'
+import classes from './css/CountryDetails.module.css'
+import Card from './ui/Card'
 
 const CountryDetail = (props) => {
   const { name, capital, flag, currencies } = props.country
 
   if (!name) {
-    return <div>Nothing to display yet</div>
+    return <div className={classes.display}>Nothing to display yet</div>
   }
   const { name: currencyName, symbol } = currencies[0]
-
-  const show = () => {
-    console.log()
-  }
-  show()
 
   return (
     <div className={classes.details}>
@@ -20,15 +15,13 @@ const CountryDetail = (props) => {
       <hr />
       <Card>
         <div className={classes.info}>
+          <p>{name}</p>
           <img src={flag} alt={name} />
           <br />
-          <section>
-            <p>{name}</p>
-            <p>Capital: {capital}</p>
-            <p>
-              Currency: {currencyName}, symbol: {symbol}
-            </p>
-          </section>
+          <p>Capital city: {capital}</p>
+          <p>
+            Currency: {currencyName}, symbol: {symbol}
+          </p>
         </div>
       </Card>
     </div>
