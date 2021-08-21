@@ -1,6 +1,5 @@
 import classes from './css/Search.module.css'
 import { useState } from 'react'
-import { useMediaQuery } from 'react-responsive'
 
 const Search = (props) => {
   const [searchValue, setSearchValue] = useState('')

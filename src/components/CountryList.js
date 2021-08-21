@@ -13,7 +13,7 @@ const CountryList = (props) => {
   useEffect(() => {
     const filterCountries = (props) => {
       const filtered = props.countries.filter((country) =>
-        country.name.toLowerCase().includes(props.searchValue)
+        country.name.toLowerCase().includes(props.searchValue.toLowerCase())
       )
       setCountries(filtered)
     }
