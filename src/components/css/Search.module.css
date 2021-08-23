@@ -60,40 +60,48 @@ span {
   .search {
     flex-direction: row;
   }
+  .close {
+    top: 4px;
+    right: -17px;
+  }
   .close::before {
-    top: 5px;
+    top: 2px;
     left: 10px;
     height: 15px;
   }
 
   .close::after {
-    top: 5px;
+    top: 2px;
     left: 10px;
     height: 15px;
   }
-  span {
+  .search span {
     font-size: 1.5rem;
     margin-right: 20px;
   }
 }
+
 @media only screen and (min-width: 768px) {
   .search {
     display: flex;
     flex-direction: row;
   }
+  .close {
+    top: 8px;
+    right: 4px;
+  }
+
   .close::before {
-    top: 9px;
-    left: 10px;
+    top: 4px;
     height: 15px;
   }
 
   .close::after {
-    top: 9px;
-    left: 10px;
+    top: 4px;
     height: 15px;
   }
-  span {
+  .search span {
     font-size: 2rem;
-    margin: 0 20px;
+    margin-right: 10px;
   }
 }

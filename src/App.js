@@ -9,6 +9,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false)
   const [searchValue, setSearchValue] = useState('')
   const [selectedCountry, setSelectedCountry] = useState({})
+  const [isOpen, setISOpen] = useState(false)
 
   const fetchUrl = () => {
     setIsLoading(true)
@@ -26,9 +27,12 @@ function App() {
             ...data[key],
           }
           countriesArr.push(country)
-          setLoadedCountries(countriesArr)
-          setIsLoading(false)
         }
+        return countriesArr
+      })
+      .then((arr) => {
+        setLoadedCountries(arr)
+        setIsLoading(false)
       })
       .catch((error) => {
         console.log(error)
@@ -51,9 +55,12 @@ function App() {
           onClick={(value) => {
             setSearchValue(value)
           }}
+          onOpen={(isOpen) => {
+            setISOpen(isOpen)
+          }}
         />
       </header>
-      <main>
+      <div className='country_list'>
         <CountryList
           countries={loadedCountries}
           onLoad={isLoading}
@@ -62,7 +69,9 @@ function App() {
             setSelectedCountry(country)
           }}
         />
-        <CountryDetail country={selectedCountry} />
+      </div>
+      <main>
+        <CountryDetail country={selectedCountry} isOpen={isOpen} />
       </main>
     </>
   )

@@ -16,7 +16,7 @@ const CountryDetail = (props) => {
       <Card>
         <div className={classes.info}>
           <p>{name}</p>
-          <img src={flag} alt={name} />
+          <img src={flag} alt={name}></img>
           <br />
           <p>Capital city: {capital}</p>
           <p>

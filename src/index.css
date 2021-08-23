@@ -9,10 +9,17 @@ header {
   justify-content: center;
 }
 main {
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.country_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 @media only screen and (min-width: 768px) {
