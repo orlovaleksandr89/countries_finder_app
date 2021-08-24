@@ -19,7 +19,6 @@ function App() {
         return response.json()
       })
       .then((data) => {
-        console.log('fetch')
         const countriesArr = []
         for (const key in data) {
           const country = {
@@ -55,8 +54,8 @@ function App() {
           onClick={(value) => {
             setSearchValue(value)
           }}
-          onOpen={(isOpen) => {
-            setISOpen(isOpen)
+          onOpen={(value) => {
+            setISOpen(value)
           }}
         />
       </header>
@@ -68,10 +67,11 @@ function App() {
           onClick={(country) => {
             setSelectedCountry(country)
           }}
+          isOpen={isOpen}
         />
       </div>
       <main>
-        <CountryDetail country={selectedCountry} isOpen={isOpen} />
+        <CountryDetail country={selectedCountry} />
       </main>
     </>
   )

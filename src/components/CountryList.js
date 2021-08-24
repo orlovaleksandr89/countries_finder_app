@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react'
 const CountryList = (props) => {
   const [selectedCountry, setSelectedCountry] = useState({})
   const [countries, setCountries] = useState([])
-  const [listIsOpen, setListIsOpen] = useState(false)
+  const [listIsOpen, setListIsOpen] = useState(props.isOpen)
+  console.log(listIsOpen)
 
   useEffect(() => {
     document.title = selectedCountry.name || 'Countries finder'
@@ -25,6 +26,10 @@ const CountryList = (props) => {
       setCountries(props.countries)
     }
   }, [props.searchValue, props])
+
+  useEffect(() => {
+    setListIsOpen(props.isOpen)
+  }, [props.searchValue, props.isOpen])
 
   if (props.onLoad) {
     return (

@@ -7,7 +7,6 @@ const Search = (props) => {
 
   useEffect(() => {
     setSearchValue(searchValue)
-    console.log(searchValue)
     props.onClick(searchValue)
     return () => {
       setSearchValue('')
@@ -23,6 +22,11 @@ const Search = (props) => {
           value={searchValue}
           onChange={(event) => {
             setSearchValue(event.currentTarget.value)
+            props.onOpen(true)
+          }}
+          onFocus={() => {
+            console.log('focus')
+            props.onOpen(true)
           }}
         />
         {searchValue && (
