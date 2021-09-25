@@ -14,7 +14,9 @@ function App() {
   const fetchUrl = () => {
     setIsLoading(true)
 
-    fetch(`https://restcountries.eu/rest/v2/`)
+    fetch(
+      `http://api.countrylayer.com/v2/all?access_key=190e114891ea725f2d73338fc0f56ddf`
+    )
       .then((response) => {
         return response.json()
       })
@@ -23,7 +25,7 @@ function App() {
         for (const key in data) {
           const country = {
             id: key,
-            ...data[key],
+            ...data[key]
           }
           countriesArr.push(country)
         }
@@ -47,7 +49,11 @@ function App() {
   }, [])
 
   return (
-    <>
+    <div
+      onClick={() => {
+        setISOpen(false)
+      }}
+    >
       <header>
         <Search
           countries={loadedCountries}
@@ -73,7 +79,7 @@ function App() {
       <main>
         <CountryDetail country={selectedCountry} />
       </main>
-    </>
+    </div>
   )
 }
 

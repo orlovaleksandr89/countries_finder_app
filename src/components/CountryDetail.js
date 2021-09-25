@@ -1,13 +1,13 @@
 import classes from './css/CountryDetails.module.css'
 import Card from './ui/Card'
+import Flag from 'react-world-flags'
 
 const CountryDetail = (props) => {
-  const { name, capital, flag, currencies } = props.country
+  const { name, capital, region, alpha2Code } = props.country
 
   if (!name) {
     return <div className={classes.display}>Nothing to display yet</div>
   }
-  const { name: currencyName, symbol } = currencies[0]
 
   return (
     <div className={classes.details}>
@@ -16,13 +16,13 @@ const CountryDetail = (props) => {
       <Card>
         <div className={classes.info}>
           <p>{name}</p>
-          <img src={flag} alt={name}></img>
+
           <br />
           <p>Capital city: {capital}</p>
-          <p>
-            Currency: {currencyName}, symbol: {symbol}
-          </p>
+          <br />
+          <p>Region: {region}</p>
         </div>
+        <Flag code={alpha2Code} />
       </Card>
     </div>
   )

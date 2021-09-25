@@ -61,6 +61,7 @@
 }
 ul > li {
   font-size: 16px;
+  border-bottom: 1px solid #cecece;
 }
 
 .select-dropdown__list-item {
@@ -68,11 +69,11 @@ ul > li {
   list-style-type: none;
   padding: 10px 15px;
   background-color: #fff;
-  border-top: 1px solid #cecece;
+  border-top: 1px solid #000000;
   line-height: 1.4;
   padding-left: 10px;
   cursor: pointer;
-  color: #616161;
+  color: #c9c9c9;
   text-align: left;
   transition: all ease-in-out 0.3s;
 }
