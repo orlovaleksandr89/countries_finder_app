@@ -1,7 +1,8 @@
 import CountryList from './components/CountryList'
 import Search from './components/Search'
 import CountryDetail from './components/CountryDetail'
-
+// const api =
+//   'http://api.countrylayer.com/v2/all?access_key=190e114891ea725f2d73338fc0f56ddf'
 import { useState, useEffect } from 'react'
 
 function App() {
@@ -14,9 +15,7 @@ function App() {
   const fetchUrl = () => {
     setIsLoading(true)
 
-    fetch(
-      `https://api.countrylayer.com/v2/all?access_key=190e114891ea725f2d73338fc0f56ddf`
-    )
+    fetch(`https://restcountries.com/v2/all`)
       .then((response) => {
         return response.json()
       })
@@ -32,6 +31,7 @@ function App() {
         return countriesArr
       })
       .then((arr) => {
+        console.log(arr)
         setLoadedCountries(arr)
         setIsLoading(false)
       })
