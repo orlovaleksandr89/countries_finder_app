@@ -15,7 +15,7 @@ function App() {
     setIsLoading(true)
 
     fetch(
-      `http://api.countrylayer.com/v2/all?access_key=190e114891ea725f2d73338fc0f56ddf`
+      `https://api.countrylayer.com/v2/all?access_key=190e114891ea725f2d73338fc0f56ddf`
     )
       .then((response) => {
         return response.json()
